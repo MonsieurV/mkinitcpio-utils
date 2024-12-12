@@ -1,6 +1,7 @@
 #!/bin/sh
 blkid
 ls /dev
+ls /dev/mapper
 #!/bin/sh
 if [ -c "/dev/mapper/control" ]; then
     if eval /sbin/cryptsetup luksOpen \`cat /.cryptdev\` \`cat /.cryptname\` \`cat /.cryptargs\` ; then
